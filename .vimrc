@@ -30,6 +30,10 @@ autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 au FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
 
+" highligt trailing spaces
+highlight TrailingSpace ctermbg=red
+match TrailingSpace /\s\+$/
+
 " indent/unindent with tab/shift-tab 
 nmap <Tab> >>
 nmap <S-tab> <<
